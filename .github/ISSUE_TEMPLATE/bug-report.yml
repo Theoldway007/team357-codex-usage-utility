@@ -1,1 +1,44 @@
-
+name: Bug report
+description: Report a reproducible problem with the utility
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: Please remove account names, email addresses, tokens, user-name paths, and live usage data before submitting.
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - Windows
+        - macOS
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Utility version
+      placeholder: "Windows 0.4.16 or macOS 0.6.0"
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: Operating-system version
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Tell us what you did and what happened.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
